@@ -1,29 +1,28 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
-  </div>
-</template>
+  <v-app>
+    <div>
+      <v-toolbar class="primary" dark>
+        <v-toolbar-title>NEWBIE Trader</v-toolbar-title>
+        <v-spacer></v-spacer>
+        <v-toolbar-items class="link">
+          <router-link to="/">
+            <v-btn text>Home</v-btn>
+          </router-link>
 
-<style lang="scss">
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-#nav {
-  padding: 30px;
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
-}
+          <router-link to="/consulta">
+            <v-btn text>Consulta</v-btn>
+          </router-link>
+          
+          <router-link to="/cadastro">
+            <v-btn text>Cadastro</v-btn>
+          </router-link>
+        </v-toolbar-items>
+      </v-toolbar>
+    </div>
+    <router-view></router-view>
+  </v-app>
+</template>
+<style lang="sass" scoped>
+.link
+  margin-top: 30px  
 </style>
