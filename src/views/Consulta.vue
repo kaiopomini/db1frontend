@@ -14,8 +14,8 @@
         <tr v-for="(item, index) in stocks" :key="index">
           <td>{{ item.name }}</td>
           <td>{{ item.dateFormated }}</td>
-          <td>{{ item.value.start }}</td>
-          <td>{{ item.value.end }}</td>
+          <td>{{ item.value.startFormated }}</td>
+          <td>{{ item.value.endFormated }}</td>
           
         </tr>
       </tbody>
