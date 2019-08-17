@@ -16,6 +16,7 @@
           <td>{{ item.dateFormated }}</td>
           <td>{{ item.value.startFormated }}</td>
           <td>{{ item.value.endFormated }}</td>
+          <td> <v-btn class="primary" @click="edit(stock.id)">EDITAR</v-btn></td>
           
         </tr>
       </tbody>
@@ -40,6 +41,8 @@ export default class Consulta extends Vue {
       this.stocks = stocks;
     });
   }
-  
+  edit(id: string){
+    this.$router.push(`/cadastro/${id}`);
+  }
 }
 </script>

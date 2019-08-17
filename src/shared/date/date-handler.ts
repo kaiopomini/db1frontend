@@ -20,5 +20,13 @@ export default class DateHandler {
         return value < 10 ? `0${value}` : value.toString();
     }
 
+    static toDateEn(date: string){
+        if (date && date.length == 10){
+            const dateSplited = date.split('/');
+            return `${dateSplited[2]}-${dateSplited[1]}-${dateSplited[0]}`;
+        }
+        return '';
+    }
+
 
 }
